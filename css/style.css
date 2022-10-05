@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color:#fff;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  position: relative;
+  top: 250px;
+  margin-left: 20%;
+  margin-right: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transform: translate(-0%, -0%);
+}
+
+/*------ Header, logo and searchbar styling ------*/
+
+.header {
+    box-shadow: 1px 1px 4px 0 rgba(104, 105, 106, 10);
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    z-index: 3;  
+}
+.header .logo {
+    float: left;
+    display: flex;
+    position: relative;
+    left: 20px;
+    font-size: 0.5em;
+    padding: 20px 20px;
+    align-items:center;  
+  }
+  .logo img{
+    width: 100px;
+    height: auto;
+  }
+  /*------ Searchbar ------*/
+  #searchBar {
+    margin: 50px auto;
+    display: block;
+    width: 50%;
+    padding: 10px;    
+  }
+
+  /*------ Radiobutten and nav styling ------*/
+
+  nav {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: -10px;
+  }
+
+  label {
+    padding-left: 2px;
+    padding-right: 15px;
+  }
+
+  .radioButton {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+    align-content: center;
+    list-style: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .radioButton input{
+    cursor: pointer;    
+  }
+  .radioButton input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 12px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.radioButton input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 12px;
+    position: relative;
+    background-color: rgb(170, 83, 12);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+.radioButton label{
+   cursor: pointer;
+ }
+
+/*------ Images styling ------*/
+
+img {
+  height: 450px;
+  width: 300px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*------ Footer styling ------*/
+footer{
+  width: 100%;
+  padding: 10px 0; 
+  background: #333;
+}
+
+.footer_style{
+  position: relative;
+  top: 250px;
+  }
+
+.footer_style p{
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+/*------ Media styling------*/
+
+  @media  (min-width:768px) {
+  .radioButton {
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container {
+    top: 150px;
+  }
+  .footer_style{
+    position: relative;
+    top: 150px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="movies_database.js?speed=2"></script>
+    <script defer src="script.js?speed=2"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Movie Finder</title>
+</head>
+<body>
+    
+        <!------ Logo & Searchbar ------>
+    <header class="header">        
+            <a href="index.html" class="logo"><img src="images/034d667af842403da4ba8619aa1d23b7.png" alt="Movie Finder Logo"></a>
+
+            <div class="searchBar">
+                <input type="search" name="search_btn" 
+                id="searchBar" placeholder="search....." title="Type in a movie">
+            </div>
+
+
+
+        <!------ Radio Button Filter ------>
+        <nav>        
+            <div class="radioButton">
+                <div>
+                    <input type="radio" id="latest"
+                    name="Movies" value="Latest movies, 2014 or newer">
+                    <label for="newMovies">Latest movies, 2014 or newer</label>
+                </div>
+                <div>
+                    <input type="radio" id="Avenger"
+                    name="Movies" value="avanger">
+                    <label for="Avenger">Avenger Movies</label>
+                </div>
+                <div>
+                    <input type="radio" id="Xmen"
+                    name="Movies" value="xmen">
+                    <label for="Xmen">X-men Movies</label>
+                </div>
+                <div>
+                    <input type="radio" id="Princess"
+                    name="Movies" value="princess">
+                    <label for="Princess">Princess Movies</label>
+                </div>
+                <div>
+                    <input type="radio" id="Batman"
+                    name="Movies" value="batman">
+                    <label for="Batman">Batman Movies</label>
+                </div>
+                <div>
+                    <input type="radio" id="allMovies"
+                    name="Movies" value="allmovies">
+                    <label for="allMovies">All Movies</label>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+
+
+    <main>
+        <!------ Movies imgages and options ------>
+        <div class="container" id="container"><ul id="list_of_movie"></ul></div>
+    </main>
+
+
+    <footer class="footer_style"><p> <p>© Movie Finder. Alle rechten voorbehouden.</p></p></footer>
+    
+</body>
+</html>
