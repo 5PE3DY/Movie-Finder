@@ -87,7 +87,7 @@ function HandleOnChangeEvent() {
       BySearchMovies = movies
         .filter(
           (movies) =>
-            movies.title.includes(value) +
+            movies.title.toLowerCase().includes(value.toLowerCase()) +
             movies.year.includes(value) +
             movies.type.includes(value)
         )
@@ -107,7 +107,7 @@ function HandleOnChangeEvent() {
 }
 
 const ResetAll = function () {
-  var nodes = document.getElementById("container").getElementsByTagName("img");
+  const nodes = document.getElementById("container").getElementsByTagName("img");
   for (var i = 0, len = nodes.length; i != len; ++i) {
     nodes[0].parentNode.removeChild(nodes[0]);
   }
@@ -115,12 +115,13 @@ const ResetAll = function () {
 
 const ListAllMovies = function (movies) {
   movies.forEach((movies) => {
-    let ListA = document.createElement("a");
-    let ListImg = document.createElement("img");
+    const ListA = document.createElement("a");
+    const ListImg = document.createElement("img");
 
     // Ik wilde een target_blank toevoegen maar dat is mij niet gelukt.
         
     ListA.href = "https://www.imdb.com/title/" + movies.imdbID ;
+    ListA.target = "_blank";
     ListImg.src = movies.poster;
     ListMovieHere.appendChild(ListA);
     ListA.appendChild(ListImg);
